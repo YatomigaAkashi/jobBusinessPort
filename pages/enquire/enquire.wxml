@@ -1,0 +1,15 @@
+<!--pages/enquire/enquire.wxml-->
+<navigator wx:for="{{diaries}}" wx:for-index="index" wx:key="*this" class="item-container" url="../item/item?id={{index}}">
+  <view class="desc">
+    <view class="left">
+      <view style="font-size:32rpx;margin:10rpx 0;">{{item.title}}</view>
+      <view style="font-size:24rpx;color:darkgray">{{item.time}}</view>
+      <view style="font-size:24rpx;color:darkgray">{{item.address}}</view>
+      <view style="font-size:24rpx;color:darkgray">访问量：{{item.visit}}</view>
+    </view>
+    <view class="right">
+      <image mode="aspectFit" src="{{item.avatar}}"></image>
+      <view style="font-size:18rpx;margin-top:10rpx;color:darkgray">{{item.nickname}}</view>
+    </view>
+  </view>
+</navigator>

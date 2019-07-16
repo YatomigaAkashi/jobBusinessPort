@@ -1,0 +1,5 @@
+/* pages/item/item.wxss */
+.section {
+  margin: 40rpx;
+  border-bottom: 1rpx solid #E5E7ED;
+}

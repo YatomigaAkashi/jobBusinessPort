@@ -1,0 +1,28 @@
+/* pages/mine/mine.wxss */
+
+.header {
+  height: 150rpx;
+  background: white;
+}
+
+.header .profile .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin: 15rpx 20rpx;
+  border-radius: 50rpx;
+}
+
+.header .profile .description {
+  height: 100rpx;
+  display: block;
+  float: left;
+  margin: 15rpx auto;
+}
+
+.header .profile .add {
+    float: right;
+    margin: 30rpx 20rpx;
+    height: 70rpx;
+    width: 70rpx;
+}

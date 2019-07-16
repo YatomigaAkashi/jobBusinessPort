@@ -1,0 +1,31 @@
+<!--pages/item/item.wxml-->
+<view>
+  <view class="section section_gap">
+    <view class="section__title">任职岗位</view>
+    <view class="section__title">{{job}}</view>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">任职要求</view>
+    <view class="section__title">{{require}}</view>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">任职内容</view>
+    <view class="section__title">{{content}}</view>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">任职地点</view>
+    <view class="section__title">{{address}}</view>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">任职待遇</view>
+    <view class="section__title">{{treatment}}</view>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">联系方式</view>
+    <view class="section__title">{{contact}}</view>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">发布人员</view>
+    <view class="section__title">{{nickname}}</view>
+  </view>
+</view>
