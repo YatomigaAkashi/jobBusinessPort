@@ -30,7 +30,7 @@ authorization_code:function(e){
   login: function () {
     // 暂时用这个跳转接口，等后面接后台
     wx.navigateTo({
-      url: '/pages/index/index',
+      url: '/pages/enquire/enquire',
     });
     // if (this.data.phone.length == 0 || this.data.password.length == 0) {
     //   wx.showToast({
