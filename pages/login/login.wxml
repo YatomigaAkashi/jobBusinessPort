@@ -1,15 +1,15 @@
 <!--pages/mine/login.wxml-->
-<!-- <view class='bg' style="background-image: url('/images/login-photo1.jpg');background-size: cover">
+<!-- <view class='bg' style="background-image: url('/images/icons/login-photo1.jpg');background-size: cover">
 </view> -->
 
 <view class="container">
   <view class="login-icon">
-    <image class="login-img" src="/images/login_photo.png"></image>
+    <image class="login-img" src="/images/icons/login_photo.png"></image>
   </view>
   <view class="login-from">
     <!--账号-->
     <view class="inputView">
-      <image class="nameImage" src="/images/login_name.png"></image>
+      <image class="nameImage" src="/images/icons/login_name.png"></image>
       <label class="loginLab">账号</label>
       <input class="inputText" type="number" placeholder="请输入账号" bindinput="phoneInput" />
     </view>
@@ -17,14 +17,14 @@
 
     <!--密码-->
     <view class="inputView">
-      <image class="keyImage" src="/images/login_password.png"></image>
+      <image class="keyImage" src="/images/icons/login_password.png"></image>
       <label class="loginLab">密码</label>
       <input class="inputText" type="text" password="true" placeholder="请输入密码" bindinput="passwordInput" />
     </view>
 
 <!-- 授权码验证 -->
 <view class="inputView">
-      <image class="keyImage" src="/images/login_password.png"></image>
+      <image class="keyImage" src="/images/icons/login_password.png"></image>
       <label class="loginLab">授权码</label>
       <input class="inputText" type="text" password="true" placeholder="请输入计科院授权码" bindinput="passwordInput" />
     </view>  
