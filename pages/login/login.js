@@ -29,8 +29,8 @@ authorization_code:function(e){
   // 登录
   login: function () {
     // 暂时用这个跳转接口，等后面接后台
-    wx.navigateTo({
-      url: '/pages/enquire/enquire',
+    wx.switchTab({
+      url: '../enquire/enquire',
     });
     // if (this.data.phone.length == 0 || this.data.password.length == 0) {
     //   wx.showToast({
