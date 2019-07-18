@@ -135,7 +135,18 @@ authorization_code:function(e){
       //           url: '/pages/teacher/interaction'
       //         })
       //       }
-        }
+        },
+        register_account:function(){
+        wx.navigateTo({
+          url: '../register/register',
+        })
+       },
+       code:function(){
+         wx.navigateTo({
+           url: '../forgetcode/forgetcode',
+         })
+       }
       // });
   // }}
+  
 })
