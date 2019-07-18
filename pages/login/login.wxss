@@ -38,13 +38,16 @@ page{
 
 /*表单内容*/
 .login-from {
-  margin-top: 20px;
-  flex: auto;
+  margin-top: 5px;
+  flex: 1;
+  /* display: flex; */
   height:100%;
+  width: 100%;
 }
 .inputView {
   background-color: #fff;
   line-height: 44px;
+  width: 100%;
 }
 
 /*输入框*/
@@ -65,7 +68,7 @@ page{
   margin-right: 22px;
   margin-top: 11px;
   color: #000000;
-  font-size: 14px
+  font-size: 20px
 }
 .line {
   width: 100%;
@@ -83,7 +86,34 @@ page{
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+/* 登录 */
 .loginBtn {
   width: 80%;
-  margin-top: 35px;
+  margin-top: 30px;
+}
+/* 注册界面 */
+.register {
+  font-size: 30rpx;
+  color: rgb(8, 0, 0);
+  position: fixed;
+  /* bottom: 20; */
+  margin-top: 10px;
+  left: 0;
+  right: 100;
+  padding: 10rpx;
+  text-align: left;
+  background-color:#f2f2f2;
+}
+/* 忘记密码 */
+.forgetcode {
+  font-size: 30rpx;
+  color: rgb(8, 0, 0);
+  position: fixed;
+  /* bottom: 20; */
+  margin-top: 10px;
+  left: 100;
+  right: 0;
+  padding: 10rpx;
+  text-align: right;
+  background-color:#f2f2f2;
 }
