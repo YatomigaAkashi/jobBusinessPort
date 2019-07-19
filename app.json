@@ -2,10 +2,13 @@
   "pages": [
     "pages/login/login",
     "pages/index/index",
+    "pages/register/register",
     "pages/release/release",
     "pages/enquire/enquire",
     "pages/mine/mine",
-    "pages/item/item"
+    "pages/item/item",
+    "pages/forgetcode/forgetcode",
+    "pages/menu/menu"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,26 +16,6 @@
     "navigationBarTitleText": "企业招聘发布",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#eceff4"
-  },
-  "tabBar": {
-    "color": "#858585",
-    "selectedColor": "#39b5de",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/enquire/enquire",
-        "text": "查询",
-        "iconPath": "images/icons/enquire.png",
-        "selectedIconPath": "images/icons/enquire.png"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "images/icons/mine.png",
-        "selectedIconPath": "images/icons/mineHL.png"
-      }
-    ]
   },
   "sitemapLocation": "sitemap.json"
 }
