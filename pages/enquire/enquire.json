@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "menu": "/pages/menu/menu"
+  }
 }
