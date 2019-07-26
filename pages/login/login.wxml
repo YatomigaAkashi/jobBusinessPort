@@ -6,6 +6,7 @@
   <view class="login-icon">
     <image class="login-img" src="/images/icons/login_photo.png"></image>
   </view>
+
   <view class="login-from">
     <!--账号-->
     <view class="inputView">
@@ -13,6 +14,7 @@
       <label class="loginLab">账号</label>
       <input class="inputText" type="number" placeholder="请输入账号" bindinput="phoneInput" />
     </view>
+
     <view class="line"></view>
 
     <!--密码-->
@@ -21,9 +23,11 @@
       <label class="loginLab">密码</label>
       <input class="inputText" type="text" password="true" placeholder="请输入密码" bindinput="passwordInput" />
     </view>
-<view class="line"></view>
-<!-- 授权码验证 -->
-<!-- <view class="inputView">
+
+    <view class="line"></view>
+
+    <!-- 授权码验证 -->
+    <!-- <view class="inputView">
       <image class="keyImage" src="/images/icons/login_password.png"></image>
       <label class="loginLab">授权码</label>
       <input class="inputText" type="text" password="true" placeholder="请输入授权码" bindinput="passwordInput" />
@@ -31,12 +35,17 @@
     
     <!--登录按钮-->
     <view class="loginBtnView">
-      <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
-      <!-- 忘记密码 -->
-   <button class="forgetcode" bindtap='code'>忘记密码</button>
+      <button class="loginBtn" style="background-color:  #39b5de" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
     </view>
-<!-- 注册账号 -->
-    <button class="register" bindtap='register_account'>注册账号</button>
   </view>
+</view>
+
+<!-- 底侧栏 -->
+<view class='botTab'>
+  <!-- 忘记密码 -->
+  <navigator class="botTabFlex" url='../forgetcode/forgetcode' style='width: 135rpx'>忘记密码</navigator>
+  <view class='botTabFlex' style='width: 10rpx'>|</view>
+  <!-- 注册账号 -->
+  <navigator class="botTabFlex" url='../register/register' style='width: 135rpx'>注册账号</navigator>
 </view>
 

@@ -1,5 +1,21 @@
 /* pages/item/item.wxss */
-.section {
-  margin: 40rpx;
-  border-bottom: 1rpx solid #E5E7ED;
+.content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 100rpx auto;
+  font-size: 40rpx;
+  color:darkgray;
+}
+.section__title {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 10rpx;
+}
+.job {
+  font-size:50rpx;
+  margin:20rpx 0;
+  color: black;
+  margin-bottom: 100rpx;
 }

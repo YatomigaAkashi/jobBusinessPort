@@ -1,6 +1,6 @@
 // pages/enquire/enquire.js
 const app = getApp()
-var diaries = require("../../mock/list.js")  // mock模拟
+var list = require("../../mock/list.js")  // mock模拟
 
 Page({
 
@@ -8,36 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    diaries: diaries.data.diaries ,// 需要网络请求
+    diaries: list,// 需要网络请求
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-     menulist: [
-      {
-        "id": "1",
-        "url": "../../images/menu/top.png",
-        "title": "顶部",
-      },
-      {
-        "id": "2",
-        "url": "../../images/menu/add.png",
-        "title": "发布",
-      },
-    ],
-    mainmodel: {
-      "url": "../../images/menu/home.png",
-      "title": "菜单",
-    }
-  
-  },
-  menuItemClick: function (res) {
-    console.log(res);
-    //获取点击事件的信息
-    let clickInfo = res.detail.iteminfo
-    console.log(clickInfo);
-    // 根据不同类型进行判别处理
-    //事件的处理 代码
-
   },
   /**
    * 生命周期函数--监听页面加载
@@ -95,5 +68,40 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  // 跳转发布界面
+  goToRelease() {
+    wx.navigateTo({
+      url: '../release/release',
+    })
+  },
+
+  //下拉刷新监听函数
+  _onPullDownRefresh: function () {
+    console.log("akashi");
+    setTimeout(() => {
+      const colors = this._generateColors(20);
+      this.setData({
+        colors,
+        refreshing: false,
+      });
+    }, 2000);
+  },
+
+  //加载更多监听函数
+  _onLoadmore: function () {
+    setTimeout(() => {
+      if (this.data.colors.length == 80) {
+        this.setData({ nomore: true })
+      } else {
+        const colors = this._generateColors(20);
+        this.setData({ colors: [...this.data.colors, ...colors] });
+      }
+    }, 1000);
+  },
+
+  _onScroll: function (e) {
+    console.log(e);
   },
 })

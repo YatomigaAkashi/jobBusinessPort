@@ -12,6 +12,7 @@ Page({
 
   // POST请求
   bindSubmit: function(e) {
+    console.log(e);
     var _this=this;
     this.data.value=e.detail.value;
     wx.request({

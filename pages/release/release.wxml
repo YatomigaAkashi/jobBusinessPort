@@ -1,33 +1,23 @@
+<!--pages/release/releae.wxml-->
 <form bindsubmit='bindSubmit'>
-  <view class="section section_gap">
-    <view class="section__title">任职岗位</view>
-    <input type='text' name="job"/>
+  <view class="form-here">
+    <input class="form-in" placeholder="请输入职位" name="job"/>
+    <view class="hr" style="margin-top:5px;"></view>
+
+    <input password class="form-in" placeholder="请输入薪金" name="money"/>
+    <view class="hr" style="margin-top:5px;"></view>
+
+    <input password class="form-in" placeholder="请输入联系方式" name="contact"/>
+    <view  class="hr" style="margin-top:5px;"></view>
+
+    <input type="number" class="form-in" placeholder="请输入时间" name="time"/>
+    <view class="hr" style="margin-top:5px;"></view>
+
+    <input type="number" class="form-in" placeholder="请输入地点" name="address"/>
+    <view class="hr" style="margin-top:5px;"></view>
   </view>
-  <view class="section section_gap">
-    <view class="section__title">任职要求</view>
-    <textarea name="require" maxlength='{{maxlength}}' cursor-spacing='{{cursorSpacing}}' auto-height/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">任职内容</view>
-    <textarea name="content" maxlength='{{maxlength}}' cursor-spacing='{{cursorSpacing}}' auto-height/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">任职地点</view>
-    <input name="address" maxlength='{{maxlength}}' cursor-spacing='{{cursorSpacing}}' auto-height/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">任职待遇</view>
-    <textarea name="treatment" maxlength='{{maxlength}}' cursor-spacing='{{cursorSpacing}}' auto-height/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">联系方式</view>
-    <textarea name="contact" maxlength='{{maxlength}}' cursor-spacing='{{cursorSpacing}}' auto-height/>
-  </view>
-  <view class="section section_gap">
-    <view class="section__title">发布人员</view>
-    <input type='text' name="nickname"/>
-  </view>
-  <view class="btn-area">
-    <button form-type="submit">提交</button>
+
+  <view class="submit">
+    <button class="sub-button" form-type='submit'>确认发布</button>
   </view>
 </form>

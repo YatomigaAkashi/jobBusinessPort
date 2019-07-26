@@ -1,5 +1,5 @@
 // pages/item/item.js
-var mock = require("../../mock/item.js");
+var item = require("../../mock/item.js");
 
 Page({
 
@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    information: mock.data,
+    "item_data": "",
   },
 
   /**
@@ -18,15 +18,8 @@ Page({
   },
 
   getData: function(options) {
-    var item_data = this.data.information[options.id];
     this.setData({
-      "job": item_data.job,
-      "require": item_data.require,
-      "content": item_data.content,
-      "address": item_data.address,
-      "treatment": item_data.treatment,
-      "contact": item_data.contact,
-      "nickname": item_data.nickname,
+      "item_data": item[options.id]
     })
-  }
+  },
 })

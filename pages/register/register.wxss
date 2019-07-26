@@ -14,18 +14,18 @@
   padding:0 10px;
 }
 .lbutton{
-  border: 1px solid #f9364f;
+  border: 1px solid #39b5de;
   line-height:1;
   border-radius:20px;
   padding:5px 10px;
-  color:#f9364f;
+  color:#39b5de;
 }
 .rbutton{
   line-height:1;
   border-radius:20px;
   padding:5px 10px;
   color:#ffffff;
-  background-color:#f9364f;
+  background-color:#39b5de;
 }
 
 /*form  */
@@ -64,7 +64,7 @@ width:60%;
 
 height:40px;
 line-height:40px;
-background-color:#f9364f;
+background-color:#39b5de;
 color:#ffffff;
 
 }
@@ -76,7 +76,7 @@ font-size:12px;
 
 }
 .sub-button{
-  background-color:#f9364f;
+  background-color:#39b5de;
   color:#ffffff;
   line-height:1.8;
   border-radius:30px;

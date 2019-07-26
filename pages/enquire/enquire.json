@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "menu": "/pages/menu/menu"
-  }
+    "x-tag-name": "../../components/xing-components/x-scroll-view"
+  },
+  "enablePullDownRefresh": true
 }

@@ -1,14 +1,11 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/index/index",
     "pages/register/register",
     "pages/release/release",
     "pages/enquire/enquire",
-    "pages/mine/mine",
     "pages/item/item",
-    "pages/forgetcode/forgetcode",
-    "pages/menu/menu"
+    "pages/forgetcode/forgetcode"
   ],
   "window": {
     "backgroundTextStyle": "light",

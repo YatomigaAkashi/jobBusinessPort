@@ -29,7 +29,7 @@ authorization_code:function(e){
   // 登录
   login: function () {
     // 暂时用这个跳转接口，等后面接后台
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../enquire/enquire',
     });
     // if (this.data.phone.length == 0 || this.data.password.length == 0) {
@@ -136,16 +136,6 @@ authorization_code:function(e){
       //         })
       //       }
         },
-        register_account:function(){
-        wx.navigateTo({
-          url: '../register/register',
-        })
-       },
-       code:function(){
-         wx.navigateTo({
-           url: '../forgetcode/forgetcode',
-         })
-       }
       // });
   // }}
   

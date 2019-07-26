@@ -1,11 +1,89 @@
 /* pages/release/release.wxss */
-form {
-  width: 100%;
+.top-switch{
+  background-color:#ffffff;
+  padding:10px 15px;
+  display:flex;
 }
-form .section {
-  margin: 10rpx;
+.left{
+  width:50%;
+  padding:0 10px;
+  border-right:1rpx solid #d6d6d6; 
 }
-form input, form textarea {
-  width: 90%;
-  border: 1rpx solid #eceff4;
+.right{
+  width:50%;
+  padding:0 10px;
+}
+.lbutton{
+  border: 1px solid #39b5de;
+  line-height:1;
+  border-radius:20px;
+  padding:5px 10px;
+  color:#39b5de;
+}
+.rbutton{
+  line-height:1;
+  border-radius:20px;
+  padding:5px 10px;
+  color:#ffffff;
+  background-color:#39b5de;
+}
+
+/*form  */
+
+.form-here{
+  margin-top:10px;
+  background-color:#ffffff;
+  padding:20px 30px;
+}
+
+.form-in{
+  margin-top:20px;
+}
+.submit{
+  margin-top:30px;
+display:flex;
+justify-content:center;
+flex-flow:column wrap;
+
+}
+
+
+/*addition  */
+.verify{
+
+display:flex;
+justify-content:space-between;
+
+}
+.verify-input{
+
+width:60%;
+
+}
+.getcode{
+
+height:40px;
+line-height:40px;
+background-color:#39b5de;
+color:#ffffff;
+
+}
+.agree{
+
+text-align:center;
+font-size:12px;
+
+
+}
+.sub-button{
+  background-color:#39b5de;
+  color:#ffffff;
+  line-height:1.8;
+  border-radius:30px;
+  padding:5px 120px;
+  margin-top:20px;
+
+}
+.agreement{
+  color: #40a1e0;
 }
