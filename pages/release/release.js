@@ -7,7 +7,11 @@ Page({
   data: {
     maxlength: 200,
     cursorSpacing: 100,
+    datef: '2019-09-01',
+    datel: '2019-09-01',
     value: {},
+    region: ['陕西省', '西安市', '长安区'],
+    customItem: '全部'
   },
 
   // POST请求
@@ -30,7 +34,24 @@ Page({
       },
     })
   },
-
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      datef: e.detail.value
+    })
+  },
+  bindDateChange2: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      datel: e.detail.value
+    })
+  },
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
   // 提交后弹出对话窗口
   upCue: function (result) {
     var news;
