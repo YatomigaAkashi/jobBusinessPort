@@ -5,26 +5,27 @@
         <view class="hr" style="margin-top:5px;"></view> -->
     <!-- </view> -->
     <!-- <view class="form-password"> -->
-        <input class="form-password" placeholder="请输入昵称"/>
+        <input class="form-password" value="{{name}}" bindchange='myname' placeholder="请输入昵称"/>
         <view class="hr" style="margin-top:5px;"></view>
-        <input password class="form-password" placeholder="请输入密码" />
+        <input password class="form-password" value="{{password}}" bindchange='mypassword' placeholder="请输入密码" />
         <view class="hr" style="margin-top:5px;"></view>
-        <input password class="form-password" placeholder="请确认密码" />
+        <input password class="form-password" value="{{repassword}}" bindchange='judgepassword' placeholder="请确认密码" />
         <view  class="hr" style="margin-top:5px;"></view>
-        <input type="number" class="form-password" placeholder="请输入邮箱地址"/>
+        <input class="form-password" value="{{email}}" bindchange='myemail' placeholder="请输入邮箱地址"/>
         <view class="hr" style="margin-top:5px;"></view>
-        <view class="verify">
+        <input class="form-password" value="{{authorization}}" bindchange='myauthorization' placeholder="请输入计科院授权码"/>
+        <!-- <view class="verify">
             <view class="verify-input">
               <input class="form-password" placeholder="邮件验证码" />
               <view class="hr" style="margin-top:5px;"></view>
             </view>
             <button class="getcode">获取验证码</button>
-        </view>
+        </view> -->
     <!-- </view> -->
 </view>
 <view class="submit">
     <view class="agree">
       <checkbox color="#f9364f" value="点击注册" checked="true"/>点击注册，表示您同意西电计科学工 <text class="agreement">《服务协议》</text>
     </view>
-    <button class="sub-button">免费注册</button>
+    <button class="sub-button" bindtap="submit">免费注册</button>
 </view>
