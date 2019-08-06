@@ -1,6 +1,6 @@
 // pages/enquire/enquire.js
 const app = getApp()
-var list = require("../../mock/list.js")  // mock模拟
+var list = require("../../mock/item.js")  // mock模拟
 
 Page({
 
