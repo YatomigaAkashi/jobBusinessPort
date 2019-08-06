@@ -1,6 +1,6 @@
 <!--pages/release/releae.wxml-->
 <form bindsubmit='bindSubmit'>
-<view class="line"></view>
+
   <view class="form-here">
     <input class="form-in" placeholder="请输入职位" name="job"/>
     
@@ -12,33 +12,22 @@
 <view class="line"></view>
    
     <view class="section">
-  <view class="section__title">招聘时间</view>
+  <view class="section__title">招聘时间:</view>
   <picker mode="date" value="{{datef}}" start="2015-09-01" end="2032-09-01" bindchange="bindDateChange">
-    <view class="picker">
       起始日期: {{datef}}
-    </view>
   </picker>
   <picker mode="date" value="{{datel}}" start="2015-09-01" end="2032-09-01" bindchange="bindDateChange2">
-    <view class="picker">
       截止日期: {{datel}}
-    </view>
   </picker>
 </view>
-   
-<view class="line"></view>
-    <!-- <input type="number" class="form-in" placeholder="请输入地点" name="address"/> -->
+<view class="line"></view>  
      <view class="section">
-  <view class="section__title">工作地点</view>
   <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-    <view class="picker">
-      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
-    </view>
+  <view class="section__title">工作地点 :{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
   </picker>
 </view>
-    <!-- <view class="hr" style="margin-top:5px;"></view> -->
     <view class="line"></view>
   </view>
-
   <view class="submit">
     <button class="sub-button" form-type='submit'>确认发布</button>
   </view>
