@@ -5,6 +5,7 @@
     "pages/release/release",
     "pages/enquire/enquire",
     "pages/item/item",
+    "pages/jobselect/jobselect",
     "pages/forgetcode/forgetcode"
   ],
   "window": {
