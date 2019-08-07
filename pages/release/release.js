@@ -11,9 +11,14 @@ Page({
     datel: '2019-09-01',
     value: {},
     region: ['陕西省', '西安市', '长安区'],
-    customItem: '全部'
+    customItem: '全部',
+    email:''
   },
-
+lookjob:function(e){
+wx.navigateTo({
+  url: '../jobselect/jobselect',
+})
+},
   // POST请求
   bindSubmit: function(e) {
     console.log(e);
@@ -51,6 +56,20 @@ Page({
     this.setData({
       region: e.detail.value
     })
+  },
+  //验证邮箱
+  email(e) {
+    var email = e.detail.value
+    let regEmail = /^[a-z\d_\-\.]+@[a-z\d_\-]+\.[a-z\d_\-]+$/i;
+    if (!regEmail.test(email)) {
+      wx.showModal({
+        title: '错误',
+        content: '邮箱输入错误',
+      })
+    }
+    else {
+      this.data.email = e.detail.value
+    }
   },
   // 提交后弹出对话窗口
   upCue: function (result) {
