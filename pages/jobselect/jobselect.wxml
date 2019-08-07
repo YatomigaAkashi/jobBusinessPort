@@ -1,0 +1,15 @@
+<view class="wrapper">
+    <form>
+        <view class="group">
+            <view class="title">职位选择</view>
+            <checkbox-group bindchange="checkboxChange">
+                <label class="checkbox" wx:for="{{taste}}" wx:key="*this">
+                    <checkbox value="{{item}}" checked="{{item.checked}}"/>{{item}}
+                </label>
+            </checkbox-group>
+        </view>
+        <view class="btn-area">
+             <button class="btn-primary" hover-class="btn-primary-hover" formType="submit">确 定</button>
+        </view>
+    </form>
+</view>
