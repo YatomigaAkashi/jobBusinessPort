@@ -1,17 +1,24 @@
 <!--pages/release/releae.wxml-->
 <form bindsubmit='bindSubmit'>
-
   <view class="form-here">
-    <input class="form-in" placeholder="请输入职位" name="job"/>
+  <view>公司名称：</view>
+    <input class="form-in" placeholder="请输入公司名称" name="company"></input>
+    <view class="line"></view>
+    <view>职位：</view>
+    <input class="form-in" placeholder="请选择职位" name="job" bindtap="lookjob"/>
+    <view class="line"></view>
+    <view>
+    <view>薪资：</view>
+    <input class="form-in" placeholder="请输入最小值(单位为元)" name="moneymin">最小值：</input>
+    <input class="form-in" placeholder="请输入最大值(单位为元)" name="moneymax">最大值：</input>
+    </view>
+    
     
 <view class="line"></view>
-    <input class="form-in" placeholder="请输入薪金(单位为元)" name="money"/>
-    
+<view>邮箱：</view>
+    <input class="form-in" placeholder="请输入联系方式(工作邮箱)" name="contact" bindchange="email"/>
 <view class="line"></view>
-    <input class="form-in" placeholder="请输入联系方式(工作邮箱)" name="contact"/>
-<view class="line"></view>
-   
-    <view class="section">
+ <view class="section">
   <view class="section__title">招聘时间:</view>
   <picker mode="date" value="{{datef}}" start="2015-09-01" end="2032-09-01" bindchange="bindDateChange">
       起始日期: {{datef}}
@@ -21,14 +28,17 @@
   </picker>
 </view>
 <view class="line"></view>  
-     <view class="section">
+<view class="section">
   <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
   <view class="section__title">工作地点 :{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
   </picker>
 </view>
     <view class="line"></view>
-  </view>
-  <view class="submit">
+    <view>宣讲会（若无，可不填）</view>
+    <input class="submit" class="form-in" placeholder="请输入宣讲会时间(选填)" name="setion_time" />
+  <view class="line"></view>
+  <input class="submit" class="form-in" placeholder="请输入宣讲会地点(选填)" name="setion_address"></input>
+  <view class="line"></view>
     <button class="sub-button" form-type='submit'>确认发布</button>
   </view>
 </form>
