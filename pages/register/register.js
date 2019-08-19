@@ -59,7 +59,59 @@ Page({
     }
   },
 submit:function(e){
-//这个地方先判断，再写入数据库
+  var flag=0
+  var email = this.data.email
+  let regEmail = /^[a-z\d_\-\.]+@[a-z\d_\-]+\.[a-z\d_\-]+$/i;
+  if (!regEmail.test(email)) {
+    flag=1
+  }
+  var authorization = this.data.authorization
+  if (authorization != '123456') {
+    flag=1
+  }
+  if (this.data.password!=this.data.repassword){
+    flag=1
+  }
+  if(flag!=0){
+    wx.showModal({
+      title: '错误',
+      content: '信息有误，请核对信息',
+    })
+  }
+  else{
+    // console.log(this.data.email)
+    // console.log(this.data.password)
+    // console.log(this.data.authorization)
+    wx.request({
+      url: 'https://www.ishclass.cn/recruit/login/register',
+      method: 'post',
+      data: {
+        mail:this.data.email,
+        password: this.data.password,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'  //默认值  
+      },
+      success:function(res){
+
+        wx.showToast({
+          title: '注册成功',
+        })
+        setTimeout(function(){
+          var pages = getCurrentPages(); // 当前页面
+          var beforePage = pages[pages.length - 2]; // 前一个页面
+          // console.log("beforePage");
+          // console.log(beforePage);
+          wx.navigateBack({
+            success: function () {
+              beforePage.onLoad(); // 执行前一个页面的onLoad方法
+            }
+          });
+        },1500)
+        
+      }
+    })
+  }
 },
   /**
    * 生命周期函数--监听页面加载
