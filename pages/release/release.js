@@ -1,4 +1,5 @@
 // pages/release/release.js
+var app=getApp()
 Page({
 
   /**
@@ -12,50 +13,81 @@ Page({
     value: {},
     region: ['陕西省', '西安市', '长安区'],
     customItem: '全部',
-    email:''
+    email:'',
+    name:'',
+    position:''
   },
 lookjob:function(e){
+ this.data. position=app.globalData.position
 wx.navigateTo({
   url: '../jobselect/jobselect',
 })
 },
   // POST请求
-  bindSubmit: function(e) {
-    console.log(e);
-    var _this=this;
-    this.data.value=e.detail.value;
+  formSubmit: function(e) {
+    // console.log(e)
+    // console.log(app.globalData.email)
+    // console.log(app.globalData.position)
+    // console.log(e.detail.value.workplace)
+    // var a=e.detail.value.workplace.join(',')
+    // console.log(a)
+    this.data.position = app.globalData.position
     wx.request({
-      url: 'test.php', //仅为示例，并非真实的接口地址
-      data: this.data.value,
-      method: "POST",
+      url: 'https://www.ishclass.cn/recruit/recruit/add',
+      method: 'post',
+      data:{
+        usermail:app.globalData.email,
+        company:e.detail.value.company,
+        job: app.globalData.position,
+        salary:e.detail.value.moneymin+'--'+e.detail.value.moneymax,
+        workplace: e.detail.value.workplace.join(','),
+        recruittime:e.detail.value.firstdata+'--'+e.detail.value.lastdata,
+        companymail:e.detail.value.contact,
+        partytime:e.detail.value.setion_time,
+        partyplace:e.detail.value.setion_address,
+      },
+      // method: 'GET',
+      // header: {
+      //   'content-type': 'application/json'  //默认值  
+      // },
+      
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': "application/x-www-form-urlencoded" // 默认值 
       },
-      success(res) {
-        _this.upCue(true);
-      },
-      fail() {
-        _this.upCue(false);
+      success:function(res){
+        if(res.data==true){
+          wx.showToast({
+            title: '修改成功',
+            icon: 'success',
+            duration: 1500
+          })
+          setTimeout(function () {
+            wx.navigateBack({
+              delta: 1
+            })
+          }, 1500);
+        }
+        else{
+          wx.showToast({
+            title: '请重新发布',
+            icon: 'fail',
+            duration: 1500
+          })
+        }
       },
     })
   },
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      datef: e.detail.value
-    })
+    
   },
   bindDateChange2: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      datel: e.detail.value
-    })
+    
   },
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      region: e.detail.value
-    })
+   
   },
   //验证邮箱
   email(e) {
@@ -71,27 +103,13 @@ wx.navigateTo({
       this.data.email = e.detail.value
     }
   },
-  // 提交后弹出对话窗口
-  upCue: function (result) {
-    var news;
-    if (result) {
-      news = "提交成功";
-    } else {
-      news = "提交失败";
-    }
-    wx.showModal({
-      title: "提交结果",
-      content: news,
-      success(res) {
-        if (res.confirm) {
-          console.log("跳转");
-          wx.navigateBack({
-            delta: 1
-          })
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
-  }
+   /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that=this
+   that.setData({
+     'this.data.position': app.globalData.position
+   }) 
+  },
 })
