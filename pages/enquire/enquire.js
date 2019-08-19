@@ -1,6 +1,6 @@
 // pages/enquire/enquire.js
 const app = getApp()
-var list = require("../../mock/item.js")  // mock模拟
+// var list = require("../../mock/item.js")  // mock模拟
 
 Page({
 
@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    diaries: list,// 需要网络请求
+    diaries:[],// 需要网络请求
     userInfo: {},
     hasUserInfo: false,
   },
@@ -16,6 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -35,7 +36,7 @@ Page({
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
-          this.setData({
+          that.setData({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
@@ -45,24 +46,36 @@ Page({
     /**
      * 这个地方加载界面，显示是否已经发布过信息
      */
-    // var _this = this;
-    // wx.request({
-    //   url: 'test.php', // 请求当前所有项目信息
-    //   data: "", // 请求信息
-    //   method: "GET",
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success(res) {
-    //     _this.setData.diaries = res.data; // 接收返回值
-    //   },
-    //   fail() {
-    //     console.log("连接失败");
-    //   },
-    // })
+    var that = this;
+    wx.request({
+      url: 'https://www.ishclass.cn/recruit/recruit/getOne', // 请求当前所有项目信息
+      method: "GET",
+      data: {
+        usermail:app.globalData.email
+      }, // 请求信息
+      
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+      //  var x=res.data
+      //  var x=x.split(",")
+      //    console.log(x)
+        if(res.data.length>0){
+        console.log(res.data)
+          that.setData({
+            diaries:res.data
+          })
+        }
+      },
+      fail() {
+        console.log("连接失败");
+      },
+    })
+    console.log(that.data.diaries)
   },
   getUserInfo: function (e) {
-    console.log(e)
+    
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
@@ -72,11 +85,11 @@ Page({
 
   // 跳转发布界面
   goToRelease() {
+    console.log(this.data.diaries)
     wx.navigateTo({
       url: '../release/release',
     })
   },
-
   //下拉刷新监听函数
   _onPullDownRefresh: function () {
     console.log("akashi");
@@ -102,6 +115,5 @@ Page({
   },
 
   _onScroll: function (e) {
-    console.log(e);
   },
 })
