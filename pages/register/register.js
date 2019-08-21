@@ -11,6 +11,12 @@ Page({
       email:"",
       authorization:"",
   },
+  //跳转到服务协议
+  severice:function(){
+    wx.navigateTo({
+      url: '../severice/severice',
+    })
+  },
   //写入姓名
   myname(e){
     this.data.name=e.detail.value
@@ -29,6 +35,13 @@ Page({
       wx.showModal({
         title: '错误',
         content: '前后密码不一致',
+      })
+    }
+    if(data1.length<4 || data2.length<4){
+      wx.showToast({
+        title: '请设置密码长度在4-16位之间',
+        icon: 'none',
+        duration: 1000
       })
     }
   },
@@ -72,16 +85,16 @@ submit:function(e){
   if (this.data.password!=this.data.repassword){
     flag=1
   }
+  else if(this.data.password.length<4 || this.data.repassword.length<4){
+    flag=1
+  }
   if(flag!=0){
     wx.showModal({
-      title: '错误',
-      content: '信息有误，请核对信息',
+      title: '错误提醒',
+      content: '以上信息有误，请再次核对信息',
     })
   }
   else{
-    // console.log(this.data.email)
-    // console.log(this.data.password)
-    // console.log(this.data.authorization)
     wx.request({
       url: 'https://www.ishclass.cn/recruit/login/register',
       method: 'post',
@@ -93,15 +106,12 @@ submit:function(e){
         'content-type': 'application/x-www-form-urlencoded'  //默认值  
       },
       success:function(res){
-
         wx.showToast({
           title: '注册成功',
         })
         setTimeout(function(){
           var pages = getCurrentPages(); // 当前页面
           var beforePage = pages[pages.length - 2]; // 前一个页面
-          // console.log("beforePage");
-          // console.log(beforePage);
           wx.navigateBack({
             success: function () {
               beforePage.onLoad(); // 执行前一个页面的onLoad方法
