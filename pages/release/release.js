@@ -25,12 +25,6 @@ wx.navigateTo({
 },
   // POST请求
   formSubmit: function(e) {
-    // console.log(e)
-    // console.log(app.globalData.email)
-    // console.log(app.globalData.position)
-    // console.log(e.detail.value.workplace)
-    // var a=e.detail.value.workplace.join(',')
-    // console.log(a)
     this.data.position = app.globalData.position
     wx.request({
       url: 'https://www.ishclass.cn/recruit/recruit/add',
@@ -46,11 +40,6 @@ wx.navigateTo({
         partytime:e.detail.value.setion_time,
         partyplace:e.detail.value.setion_address,
       },
-      // method: 'GET',
-      // header: {
-      //   'content-type': 'application/json'  //默认值  
-      // },
-      
       header: {
         'content-type': "application/x-www-form-urlencoded" // 默认值 
       },
@@ -61,11 +50,10 @@ wx.navigateTo({
             icon: 'success',
             duration: 1500
           })
-          setTimeout(function () {
-            wx.navigateBack({
-              delta: 1
-            })
-          }, 1500);
+          wx.reLaunch({
+            url: '../enquire/enquire'
+          })
+          
         }
         else{
           wx.showToast({
@@ -79,15 +67,21 @@ wx.navigateTo({
   },
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    
+    this.setData({
+      datef: e.detail.value
+    })
   },
   bindDateChange2: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    
+    this.setData({
+      datel: e.detail.value
+    })
   },
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-   
+    this.setData({
+      region: e.detail.value
+    })
   },
   //验证邮箱
   email(e) {
@@ -107,9 +101,6 @@ wx.navigateTo({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that=this
-   that.setData({
-     'this.data.position': app.globalData.position
-   }) 
+   
   },
 })
