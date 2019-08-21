@@ -6,7 +6,8 @@
     "pages/enquire/enquire",
     "pages/item/item",
     "pages/jobselect/jobselect",
-    "pages/forgetcode/forgetcode"
+    "pages/forgetcode/forgetcode",
+    "pages/severice/severice"
   ],
   "window": {
     "backgroundTextStyle": "light",
