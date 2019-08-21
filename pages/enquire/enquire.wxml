@@ -1,19 +1,30 @@
 <!--pages/enquire/enquire.wxml-->
-<x-tag-name class="content" style='height:80%rpx' refreshing="{{refreshing}}" nomore="{{nomore}}" bindpulldownrefresh="_onPullDownRefresh" bindscroll="_onScroll" loading-text="加载中">
-  <navigator wx:for="{{diaries}}" wx:for-index="index" wx:key="*this" class="item-container">
+<view wx:if="{{diaries.length == 0}}">
+    <view class="empty">
+         <view class="icon">
+            <image src="/images/icons/empty.png" mode="aspectFill"></image>
+        </view>
+        <view class="prompt">当前尚未发布招聘信息</view>
+        <button type="warn" class="btn-warn" style="background: #00d9ff;" bindtap="goToRelease">去发布招聘</button>
+    </view>
+</view>
+<view wx:else>
+<navigator wx:for="{{diaries}}" wx:for-index="dataListindex" wx:key="*this" url="/page/item/item" class="item-container" open-type="switchTab" hover-class="other-navigator-hover">
+    <view wx:for="{{item.job}}" wx:for-item="cell">
     <view class="desc">
       <view class="right">
-        <view style="font-size:32rpx;margin:10rpx 0;">{{item.job}}</view>
+        <view style="font-size:32rpx;margin:10rpx 0;">{{cell}}</view>
         <view style="font-size:24rpx;color:darkgray">{{item.company}}</view>
         <view style="font-size:24rpx;color:red">{{item.salary}}</view>
       </view>
       <view class="left">
-      <view style="font-size:24rpx;color:darkgray">访问量：{{item.visit}}</view>
+      <view style="font-size:24rpx;color:darkgray">访问量：{{item.pv}}</view>
       </view>
+   </view> 
     </view>
   </navigator>
-</x-tag-name>
-
-<view class='release'>
+  <text>\n\n\n\n</text>
+  <view class='release'>
   <button bindtap='goToRelease'>发布招聘</button>
+  </view>
 </view>
