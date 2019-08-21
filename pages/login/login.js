@@ -44,18 +44,25 @@ Page({
           'content-type': 'application/json'  //默认值  
          },
          success:function(res){
-           if (res.data!=true){
-             wx.showModal({
-               title: '提示',
-               content: '请检查邮箱和密码是否正确，或邮箱是否注册',
-             })
-           }
-           else{
+           if (res.data==0){
              wx.redirectTo({
                url: '../enquire/enquire',
-            });
+             });
            }
-        }
+           else if(res.data==1){
+            wx.showModal({
+              title: '错误提示',
+              content: '当前邮箱未被注册，请前往注册',
+            })
+           }
+           else{
+             wx.showToast({
+               title: '密码错误，请重新输入密码',
+               icon: 'none',
+               duration: 1000
+             })
+           }
+        },
       })
     } 
          },  
