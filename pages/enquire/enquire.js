@@ -1,6 +1,5 @@
 // pages/enquire/enquire.js
 const app = getApp()
-// var list = require("../../mock/item.js")  // mock模拟
 
 Page({
 
@@ -58,8 +57,13 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
-      //  var x=res.data
-      //  var x=x.split(",")
+      
+        //var x=res.data
+        for(let i=0;i<res.data.length;i++){
+          res.data[i].job=res.data[i].job.split(",")
+          // console.log(xs)
+        }
+      //   x=x.split(",")
       //    console.log(x)
         if(res.data.length>0){
         console.log(res.data)
@@ -72,7 +76,7 @@ Page({
         console.log("连接失败");
       },
     })
-    console.log(that.data.diaries)
+    // console.log(that.data.diaries)
   },
   getUserInfo: function (e) {
     
