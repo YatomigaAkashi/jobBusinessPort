@@ -23,7 +23,10 @@
       <label class="loginLab">密码</label>
       <input class="inputText" type="text" password="true" placeholder="请输入密码" bindinput="passwordInput" />
     </view>
+    
     <view class="line"></view>
+
+
     <!--登录按钮-->
     <view class="loginBtnView">
       <button class="loginBtn" style="background-color:  #39b5de" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
