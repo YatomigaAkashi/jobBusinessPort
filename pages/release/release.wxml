@@ -1,7 +1,7 @@
 <!--pages/release/releae.wxml-->
 <form bindsubmit='formSubmit'>
   <view class="form-here">
-  <view>公司名称：</view>
+  <view class="first">公司名称：</view>
     <input class="form-in" placeholder="请输入公司名称" name="company"></input>
     <view class="line"></view>
     <view>职位：</view>

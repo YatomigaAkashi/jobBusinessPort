@@ -9,7 +9,7 @@
     </view>
 </view>
 <view wx:else>
-<navigator wx:for="{{diaries}}" wx:for-index="dataListindex" wx:key="*this" url="/page/item/item" class="item-container" open-type="switchTab" hover-class="other-navigator-hover">
+<navigator wx:for="{{diaries}}" wx:for-index="dataListindex" wx:key="*this" url="/pages/item/item?var1={{item.id}}" class="item-container" open-type="navigate" hover-class="other-navigator-hover">
     <view wx:for="{{item.job}}" wx:for-item="cell">
     <view class="desc">
       <view class="right">

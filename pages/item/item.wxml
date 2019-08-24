@@ -1,10 +1,54 @@
 <!--pages/item/item.wxml-->
-<view class='content'>
-    <view class="section__title job">{{item_data.job}}</view>
-    <view class="section__title">{{item_data.name}}</view>
-    <view class="section__title">{{item_data.money}}</view>
-    <view class="section__title">{{item_data.email}}</view>
-    <view class="section__title">{{item_data.address}}</view>
-    <view class="section__title">{{item_data.time}}</view>
-    <view class="section__title">{{item_data.contact}}</view>
-</view>
+<form bindsubmit='update'>
+  <view class="form-here">
+    <view class='first'>公司名称：</view>
+    <input class="form-in" placeholder="请输入公司名称" name="company" value="{{itemData.company}}"></input>
+    <view class="line"></view>
+
+    <view>职位：</view>
+    <view wx:if="{{position.length==0}}">
+      <input class="form-in" placeholder="请选择招聘岗位" name="job" bindtap="lookjob"/>
+    </view>
+    <view wx:else>
+      <input class="form-in" placeholder="已选择招聘岗位" name="job" bindtap="lookjob" />
+    </view>
+    <view class="line"></view>
+
+    <view>
+      <view>薪资：</view>
+      <input class="form-in" placeholder="请输入最小值(单位为元)" name="moneymin" value="{{moneymin}}">最小值：</input>
+      <input class="form-in" placeholder="请输入最大值(单位为元)" name="moneymax" value="{{moneymax}}">最大值：</input>
+    </view>
+    <view class="line"></view>
+
+    <view>邮箱：</view>
+      <input class="form-in" placeholder="请输入联系方式(工作邮箱)" name="contact" bindchange="email" value="{{itemData.companymail}}"/>
+    <view class="line"></view>
+    <view class="section">
+      <view class="section__title">招聘时间:</view>
+      <picker mode="date" value="{{datef}}" start="2015-09-01" end="2032-09-01" bindchange="bindDateChange" name="firstdata">
+        起始日期: {{datef}}
+      </picker>
+      <picker mode="date" value="{{datel}}" start="2015-09-01" end="2032-09-01" bindchange="bindDateChange2" name="lastdata">
+        截止日期: {{datel}}
+      </picker>
+    </view>
+    <view class="line"></view>  
+
+    <view class="section">
+      <picker mode="region" name="workplace" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="section__title" >工作地点 :{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+      </picker>
+    </view>
+    <view class="line"></view>
+
+    <view>宣讲会（若无，可不填）：</view>
+    <input class="submit" class="form-in" placeholder="请输入宣讲会时间(选填)" name="setion_time" value="{{itemData.partyplace}}"/>
+    <view class="line"></view>
+    <input class="submit" class="form-in" placeholder="请输入宣讲会地点(选填)" name="setion_address" value="{{itemData.partytime}}"></input>
+    <view class="line"></view>
+
+    <button class="sub-button" form-type='submit'>修改</button>
+    <button class="sub-button bottom" bindtap='delete' >删除</button>
+  </view>
+</form>

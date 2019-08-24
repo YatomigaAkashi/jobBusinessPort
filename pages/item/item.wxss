@@ -1,21 +1,107 @@
 /* pages/item/item.wxss */
-.content {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 100rpx auto;
-  font-size: 40rpx;
-  color:darkgray;
+@import "../../lib/weui.wxss";
+.picker{
+    padding: 13px;
+    background-color: #FFFFFF;
 }
-.section__title {
-  height: 50rpx;
-  line-height: 50rpx;
-  margin: 10rpx;
+.line{
+    margin-top: 10rpx;
+    background-color: #e8e8e8;
+    height: 3rpx;
+    width: 100%;
 }
-.job {
-  font-size:50rpx;
-  margin:20rpx 0;
-  color: black;
-  margin-bottom: 100rpx;
+.top-switch{
+  background-color:#ffffff;
+  padding:10px 15px;
+  display:flex;
+}
+.left{
+  width:50%;
+  padding:0 10px;
+  border-right:1rpx solid #d6d6d6; 
+}
+.right{
+  width:50%;
+  padding:0 10px;
+}
+.lbutton{
+  border: 1px solid #39b5de;
+  line-height:1;
+  border-radius:20px;
+  padding:5px 10px;
+  color:#39b5de;
+}
+.rbutton{
+  line-height:1;
+  border-radius:20px;
+  padding:5px 10px;
+  color:#ffffff;
+  background-color:#39b5de;
+}
+
+/*form  */
+
+.first {
+  margin-top: -20px;
+}
+
+.form-here{
+  margin-top:10px;
+  background-color:#ffffff;
+  padding:20px 30px;
+}
+
+.form-in{
+  margin-top:20px;
+}
+.submit{
+  margin-top:30px;
+display:flex;
+justify-content:center;
+flex-flow:column wrap;
+
+}
+
+
+/*addition  */
+.verify{
+
+display:flex;
+justify-content:space-between;
+
+}
+.verify-input{
+
+width:60%;
+
+}
+.getcode{
+
+height:40px;
+line-height:40px;
+background-color:#39b5de;
+color:#ffffff;
+
+}
+.agree{
+
+text-align:center;
+font-size:12px;
+
+
+}
+.sub-button{
+  width: 100%;
+  background-color:#39b5de;
+  color:#ffffff;
+  line-height:1.8;
+  border-radius:30px;
+  padding:5px 120px;
+  margin-top:20px;
+}
+.agreement{
+  color: #40a1e0;
+}
+.bottom {
+  margin-top: 10px;
 }

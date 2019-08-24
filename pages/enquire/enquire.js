@@ -64,9 +64,12 @@ Page({
       //   x=x.split(",")
       //    console.log(x)
         if(res.data.length>0){
-        console.log(res.data)
           that.setData({
             diaries:res.data
+          })
+          wx.setStorage({
+            key: 'diaries',
+            data: res.data,
           })
         }
       },
