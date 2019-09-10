@@ -1,0 +1,43 @@
+/* components/jump/jump.wxss */
+page {
+  background-color: #f4f4f4;
+  line-height: 100rpx;
+}
+.title {
+  width: 100%;
+  height: 100rpx;
+  padding-left: 40rpx;
+  color: #888888;
+  font-size: 26rpx;
+}
+.jump {
+  width: 100%;
+  height: 100rpx;
+  display: block;
+  background-color: #ffffff;
+  border-bottom: 1px #f4f4f4 solid;
+  position: relative;
+}
+.jump-content {
+  width: 50%;
+  height: 100rpx;
+  padding-left: 40rpx;
+  color: #000000;
+  display: inline-block;
+}
+.jump-select {
+  width: 30%;
+  height: 100rpx;
+  padding-right: 40rpx;
+  color: #888888;
+  display: inline-block;
+  text-align: right;
+  font-size: 26rpx;
+}
+.image {
+  width: 16rpx;
+  height: 20rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+}

@@ -7,11 +7,22 @@
     "pages/item/item",
     "pages/jobselect/jobselect",
     "pages/forgetcode/forgetcode",
-    "pages/severice/severice"
+    "pages/severice/severice",
+    "pages/index/index",
+    "pages/form-one/form-one",
+    "pages/form-one-one/form-one-one",
+    "pages/form-two/form-two",
+    "pages/form-three/form-three",
+    "pages/form-four/form-four",
+    "pages/form-five/form-five",
+    "pages/form-six/form-six",
+    "pages/submit-success/submit-success",
+    "pages/lists/lists",
+    "pages/lists-empty/lists-empty"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#39b5de",
+    "navigationBarBackgroundColor": "#393a3e",
     "navigationBarTitleText": "企业招聘发布",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#eceff4"

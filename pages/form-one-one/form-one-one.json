@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "jump": "/components/jump/jump"
+  }
+}

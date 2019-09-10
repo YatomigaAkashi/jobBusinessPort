@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -80,6 +80,77 @@
 					"id": -1,
 					"name": "ef",
 					"pathName": "pages/enquire/enquire",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测试组件",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "表单第一页",
+					"pathName": "pages/form-one/form-one",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "表单第一页次级第一页",
+					"pathName": "pages/form-one-one/form-one-one",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "表单第二页",
+					"pathName": "pages/form-two/form-two",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "表单第三页",
+					"pathName": "pages/form-three/form-three",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "表单第四页",
+					"pathName": "pages/form-four/form-four",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "表第五页",
+					"pathName": "pages/form-five/form-five",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "表单第六页",
+					"pathName": "pages/form-six/form-six",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "提交成功页",
+					"pathName": "pages/submit-success/submit-success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "主页",
+					"pathName": "pages/lists/lists",
+					"query": "",
 					"scene": null
 				}
 			]

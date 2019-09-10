@@ -1,0 +1,13 @@
+<!--pages/form-three/form-three.wxml-->
+<line-radio title="{{item_one.title}}" items="{{item_one.items}}"></line-radio>
+
+<view hidden='{{!isMonth}}'>
+  <view class="title">{{title}}</view>
+  <view class="slider-box">
+    <slider class="slider" min="10" max="18" value='{{slider}}' bindchanging="bindchanging"></slider>
+    <view class="slider-number">{{slider}}</view>
+  </view>
+</view>
+
+<line-input title="{{item_two.title}}" items="{{item_two.items}}"></line-input>
+<commit-btn content="下一步"></commit-btn>

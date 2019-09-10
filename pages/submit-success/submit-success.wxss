@@ -1,0 +1,18 @@
+/* pages/submit-success/submit-success.wxss */
+.main {
+  width: 60%;
+  height: 350rpx;
+  margin: 150rpx auto;
+  margin-bottom: 0rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+}
+.title {
+  color: #000000;
+  font-size: 40rpx;
+}
+.content {
+  color: #888888;
+}

@@ -1,0 +1,7 @@
+/* components/commit-btn/commit-btn.wxss */
+.commit-btn {
+  width: 90%;
+  height: 100rpx;
+  margin: 40rpx auto;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+}

@@ -1,0 +1,7 @@
+<!--pages/submit-success/submit-success.wxml-->
+<view class='main'>
+  <icon class="icon" type="success" size="200rpx"></icon>
+  <view class="title">提交成功</view>
+  <view class="content">内容详情，根据实际文案安排</view>
+</view>
+<jump content="返回首页"></jump>

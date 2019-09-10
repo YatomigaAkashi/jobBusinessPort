@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<!-- <line-radio title="{{title}}" items="{{items}}">ok</line-radio> -->
+<!-- <jump title="{{title}}" items="{{items}}"></jump> -->
+<!-- <line-input title="{{title}}" items="{{items}}"></line-input> -->
+<commit-btn content="提交"></commit-btn>
+

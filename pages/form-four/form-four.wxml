@@ -1,0 +1,6 @@
+<!--pages/form-four/form-four.wxml-->
+<line-input title="{{item_one.title}}" items="{{item_one.items}}"></line-input>
+<line-radio title="{{item_two.title}}" items="{{item_two.items}}"></line-radio>
+<jump title="{{item_three.title}}" items="{{item_three.items}}"></jump>
+<line-input title="{{item_four.title}}" items="{{item_four.items}}"></line-input>
+<commit-btn content="下一步"></commit-btn>

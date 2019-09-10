@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "line-radio": "/components/line-radio/line-radio",
+    "line-input": "/components/line-input/line-input",
+    "commit-btn": "/components/commit-btn/commit-btn"
+  }
+}

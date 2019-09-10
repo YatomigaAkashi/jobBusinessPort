@@ -1,0 +1,15 @@
+<!--pages/list/lists.wxml-->
+<view class="main">
+  <view class="title">已发布</view>
+  <view class="item {{item.isTouchMove?'list-item-touch-active':''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" mark:id="{{item.id}}" wx:for="{{lists}}">
+    <view class="item-box">
+      <view class='job'>{{item.job}}</view>
+      <view class='time'>{{item.time}}</view>
+    </view>
+    <view class='operation'>
+      <view class='delete'>删除</view>
+      <view class='update'>修改</view> 
+    </view>
+  </view>
+  <image class='add-png' src='/images/icons/add.png'></image>
+</view>

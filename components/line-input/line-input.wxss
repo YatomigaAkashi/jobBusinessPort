@@ -1,0 +1,41 @@
+/* components/line-input/line-input.wxss */
+page {
+  background-color: #f4f4f4;
+  line-height: 100rpx;
+}
+.title {
+  width: 100%;
+  height: 100rpx;
+  padding-left: 40rpx;
+  color: #888888;
+  font-size: 26rpx;
+}
+.input {
+  width: 100%;
+  border-bottom: 1px #f4f4f4 solid;
+}
+.input-content {
+  width: 25%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 40rpx;
+  color: #000000;
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+}
+.input-text {
+  width: 60%;
+  height: 100rpx;
+  color: #888888;
+  display: inline-block;
+  font-size: 30rpx;
+}
+.input-textarea {
+  width: 89.4%;
+  height: 200rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
