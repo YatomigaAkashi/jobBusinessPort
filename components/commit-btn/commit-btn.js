@@ -4,20 +4,28 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    content: String
+    content: String,
+    form_type: String,
+    url: String
   },
 
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
-
+    click: function () {
+      if (this.data.form_type === "navigateTo") {
+        wx.navigateTo({
+          url: this.data.url,
+          success: function(res) {},
+          fail: function(res) {},
+          complete: function(res) {},
+        })
+      } else if (this.data.form_type === "reLaunch") {
+        wx.reLaunch({
+          url: this.data.url,
+          success: function(res) {},
+          fail: function(res) {},
+          complete: function(res) {},
+        })
+      }
+    }
   }
 })

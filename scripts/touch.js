@@ -44,7 +44,6 @@ class touch {
           v.isTouchMove = true
       }
     })
-    console.log(items);
     return items;
   }
 

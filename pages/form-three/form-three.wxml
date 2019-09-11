@@ -10,4 +10,4 @@
 </view>
 
 <line-input title="{{item_two.title}}" items="{{item_two.items}}"></line-input>
-<commit-btn content="下一步"></commit-btn>
+<commit-btn content="下一步" form_type="navigateTo" url="../form-four/form-four"></commit-btn>

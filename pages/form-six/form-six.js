@@ -12,7 +12,6 @@ Page({
       ]
     },
     "item_two": {
-      "title": "详细地址",
       "items": [
         { "content": "起始时间", "type": "text", "placeholder": "分/时" },
         { "content": "结束时间", "type": "text", "placeholder": "分/时" },
@@ -28,6 +27,19 @@ Page({
       "items": [
         { "isTextarea": true, "placeholder": "填写详细地址" },
       ]
-    }
+    },
+    "loading": false
   },
+
+  // 提交
+  submit: function () {
+    this.setData({
+      "loading": true
+    })
+    setTimeout(() => {
+      wx.reLaunch({
+        url: '../submit-success/submit-success',
+      })
+    }, 3000)
+  }
 })

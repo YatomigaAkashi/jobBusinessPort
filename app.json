@@ -18,7 +18,8 @@
     "pages/form-six/form-six",
     "pages/submit-success/submit-success",
     "pages/lists/lists",
-    "pages/lists-empty/lists-empty"
+    "pages/lists-empty/lists-empty",
+    "pages/content/content"
   ],
   "window": {
     "backgroundTextStyle": "light",

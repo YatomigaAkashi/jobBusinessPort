@@ -1,0 +1,71 @@
+/* pages/content/content.wxss */
+page {
+  background: #f4f4f4;
+}
+.column {
+  background-color: #ffffff;
+  border-bottom: 1px #f4f4f4 solid;
+  padding-left: 40rpx; 
+  padding-right: 40rpx;
+}
+.job {
+  width: 100%;
+  height: 120rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 120rpx;
+}
+.title{
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  height: 72rpx;
+}
+.content {
+  height: 45rpx;
+  font-size: 26rpx;
+  color: #888888;
+  line-height: 45rpx;
+}
+.content-intro {
+  height: 80rpx;
+}
+.salary .content view {
+  display: inline-block;
+  margin-right: 60rpx;
+}
+.seek .content view {
+  display: inline-block;
+  margin-right: 60rpx;
+}
+.meeting .content {
+  height: 90rpx;
+}
+.company {
+  width: 100%;
+  height: 168rpx;
+}
+.company .content view>view {
+  width: 200rpx;
+  display: inline-block;
+}
+.company .content .title {
+  margin-right: 100rpx;
+  color: #000000;
+  line-height: 56rpx;
+  height: 56rpx;
+}
+.contact {
+  width: 100%;
+  height: 184rpx;
+}
+.contact .content view>view {
+  width: 200rpx;
+  display: inline-block;
+} 
+.contact .content .title {
+  margin-right: 100rpx;
+  color: #000000;
+  line-height: 56rpx;
+  height: 56rpx;
+}

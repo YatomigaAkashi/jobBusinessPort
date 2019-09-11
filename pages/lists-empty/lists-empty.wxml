@@ -1,2 +1,7 @@
 <!--pages/lists-empty/lists-empty.wxml-->
-<text>pages/lists-empty/lists-empty.wxml</text>
+<view class="main">
+  <view class='title'>您还没有发布</view>
+  <view class='content'>请前往发布页发布你的第一个招聘项</view>
+  <navigator class='navi'>去发布</navigator>
+</view>
+

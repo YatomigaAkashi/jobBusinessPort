@@ -3,4 +3,4 @@
 <line-radio title="{{item_two.title}}" items="{{item_two.items}}"></line-radio>
 <jump title="{{item_three.title}}" items="{{item_three.items}}"></jump>
 <line-input title="{{item_four.title}}" items="{{item_four.items}}"></line-input>
-<commit-btn content="下一步"></commit-btn>
+<commit-btn content="下一步" form_type="navigateTo" url="../form-five/form-five"></commit-btn>

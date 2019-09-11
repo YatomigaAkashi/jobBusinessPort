@@ -3,4 +3,8 @@
 <line-input title="{{item_two.title}}" items="{{item_two.items}}"></line-input>
 <jump title="{{item_three.title}}" items="{{item_three.items}}"></jump>
 <line-input title="{{item_four.title}}" items="{{item_four.items}}"></line-input>
-<commit-btn content="提交"></commit-btn>
+<commit-btn content="提交" bindtap='submit'></commit-btn>
+<view wx:if="{{loading}}" class="loading">
+  <image src='/images/icons/loading.png' class="{{loading?'loading-animation':''}}"></image>
+  <view>提交中</view>
+</view>

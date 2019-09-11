@@ -1,1 +1,33 @@
 /* pages/lists-empty/lists-empty.wxss */
+page {
+  background-color: #f4f4f4;
+}
+.main {
+  width: 50%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 600rpx;
+}
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.content {
+  font-size: 32rpx;
+  color: #888888;
+  text-align: center;
+}
+.navi {
+  width: 120rpx;
+  height: 50rpx;
+  border: 4rpx red solid;
+  border-radius: 25rpx 25rpx 25rpx 25rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}

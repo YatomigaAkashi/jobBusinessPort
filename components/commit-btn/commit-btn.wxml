@@ -1,2 +1,2 @@
 <!--components/commit-btn/commit-btn.wxml-->
-<button class="commit-btn" type="primary" form-type='submit' bindtap="">{{content}}</button>
+<button class="commit-btn" type="primary" bindtap="click">{{content}}</button>
