@@ -1,7 +1,7 @@
 <!--components/jump/jump.wxml-->
 <view class="jump-group">
   <view class="title" wx:if="{{title}}">{{title}}</view>
-  <navigator class="jump" wx:for="{{items}}" open-type='navigator' url="{{item.url}}">
+  <navigator class="jump" wx:for="{{items}}" open-type='navigate' url="{{item.url}}">
     <view class="jump-content">{{item.value}}</view>
     <view class="jump-select" wx:if="{{item.select}}">{{item.select}}</view>
     <image class="image" src="../../images/icons/Path.png" size="40rpx"></image>

@@ -1,0 +1,3 @@
+<!--pages/form-one-two/form-one-two.wxml-->
+<line-radio items='{{items}}'></line-radio>
+<commit-btn content="确定" form_type="navigateBack"></commit-btn>

@@ -18,6 +18,10 @@ Component({
           fail: function(res) {},
           complete: function(res) {},
         })
+      } else if (this.data.form_type === "navigateBack") {
+        wx.navigateBack({
+          delta: 2
+        })
       } else if (this.data.form_type === "reLaunch") {
         wx.reLaunch({
           url: this.data.url,

@@ -26,7 +26,7 @@
   bottom: 20rpx;
 }
 .loading-animation {
-  animation: loading 2s linear infinite;
+  animation: loading 4s linear infinite;
 }
 /* 头像旋转效果  */
 @keyframes loading{
