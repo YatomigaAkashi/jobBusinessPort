@@ -1,0 +1,2 @@
+<!--pages/addressSelector/addressSelector.wxml-->
+<line-radio bindmyevent='myevent' items="{{items}}" bindtap='jump'></line-radio>

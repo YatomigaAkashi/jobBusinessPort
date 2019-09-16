@@ -1,7 +1,8 @@
 {
   "usingComponents": {
-    "line-radio": "/components/line-radio/line-radio",
+    "line-check": "/components/line-check/line-check",
     "line-input": "/components/line-input/line-input",
-    "commit-btn": "/components/commit-btn/commit-btn"
+    "commit-btn": "/components/commit-btn/commit-btn",
+    "mp-toptips": "../../components/toptips/toptips"
   }
 }

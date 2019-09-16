@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "commit-btn": "/components/commit-btn/commit-btn",
     "line-radio": "/components/line-radio/line-radio"
   }
 }

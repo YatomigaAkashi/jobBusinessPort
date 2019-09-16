@@ -1,0 +1,9 @@
+<!--components/line-check/line-check.wxml-->
+<view class="radio-group">
+  <view class="title" wx:if="{{title}}">{{title}}</view>
+  <view class="radio" wx:for="{{items}}" bind:touchstart="click" mark:item="{{item}}">
+    <view class="radio-content">{{item.value}}</view>
+    <view class="show">{{item.show}}</view>
+    <icon class="icon" type="success_no_circle" size="40rpx" wx:if="{{item.checked}}"></icon>
+  </view>
+</view>

@@ -1,5 +1,5 @@
 <!--pages/form-three/form-three.wxml-->
-<line-radio title="{{item_one.title}}" items="{{item_one.items}}"></line-radio>
+<line-radio title="{{item_one.title}}" items="{{item_one.items}}" bindmyevent='myevent'></line-radio>
 
 <view hidden='{{!isMonth}}'>
   <view class="title">{{title}}</view>

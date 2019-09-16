@@ -1,7 +1,8 @@
 {
   "usingComponents": {
-    "jump": "/components/jump/jump",
     "line-input": "/components/line-input/line-input",
-    "commit-btn": "/components/commit-btn/commit-btn"
+    "commit-btn": "/components/commit-btn/commit-btn",
+    "mp-uploader": "../../components/uploader/uploader",
+    "mp-toptips": "../../components/toptips/toptips"
   }
 }

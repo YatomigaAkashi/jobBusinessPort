@@ -1,4 +1,5 @@
 <!--pages/form-two/form-two.wxml-->
-<line-radio title="{{item_one.title}}" items="{{item_one.items}}"></line-radio>
-<line-input title="{{item_two.title}}" items="{{item_two.items}}"></line-input>
-<commit-btn content="下一步" form_type="navigateTo" url="../form-three/form-three"></commit-btn>
+<line-check title="{{item_one.title}}" items="{{item_one.items}}" id='line-check' bindmyevent='myevent'></line-check>
+<line-input title="{{item_two.title}}" items="{{item_two.items}}" id='line-input'></line-input>
+<commit-btn content="下一步" bindtap='next' ></commit-btn>
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>

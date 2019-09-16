@@ -19,6 +19,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    revalue: function (e) {
+      this.data.value = e.detail.value;
+    },
+    getvalue: function (e) {
+      return this.data.value;
+    }
   }
 })

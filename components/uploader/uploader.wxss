@@ -2,3 +2,6 @@
 .weui-uploader>view {
   margin-left: 40rpx;
 }
+page {
+  background-color: #ffffff;
+}

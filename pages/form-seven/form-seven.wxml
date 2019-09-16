@@ -1,0 +1,11 @@
+<!--pages/form-seven/form-seven.wxml-->
+<line-input items="{{items}}" title="{{title}}"></line-input>
+<line-input items="{{items2}}" title="宣传文案"></line-input>
+<commit-btn content="提交" bindtap='submit'></commit-btn>
+
+<view wx:if="{{loading}}" class='shade'>
+  <view class="loading">
+    <image src='/images/icons/loading.png' class="{{loading?'loading-animation':''}}"></image>
+    <view>提交中</view>
+  </view>
+</view>

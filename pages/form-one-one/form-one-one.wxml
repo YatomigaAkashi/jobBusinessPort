@@ -1,2 +1,12 @@
 <!--pages/form-one-one/form-one-one.wxml-->
-<jump items="{{items}}"></jump>
+<view class="main {{pop?'popmain':''}}">
+  <line-check items="{{items}}" bindtap='click' bindmyevent='myevent' id="line-check" title="{{title}}"></line-check>
+  <commit-btn content="下一步" bindtap='next' ></commit-btn>
+</view>
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="shade {{show?'popinput':''}}" hidden='{{!pop}}'>
+  <view class="pop" style='top:{{touchY}}rpx'>
+    <line-input items="{{input.items}}" content="{{input.content}}" placeholder='{{input.placeholder}}' bindinput='input_pop' id="line-input"></line-input>
+    <button bindtap='unpop'>确定</button>
+  </view>
+</view>

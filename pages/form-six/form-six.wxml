@@ -1,10 +1,14 @@
 <!--pages/form-six/form-six.wxml-->
-<jump title="{{item_one.title}}" items="{{item_one.items}}"></jump>
-<line-input title="{{item_two.title}}" items="{{item_two.items}}"></line-input>
-<jump title="{{item_three.title}}" items="{{item_three.items}}"></jump>
-<line-input title="{{item_four.title}}" items="{{item_four.items}}"></line-input>
-<commit-btn content="提交" bindtap='submit'></commit-btn>
-<view wx:if="{{loading}}" class="loading">
-  <image src='/images/icons/loading.png' class="{{loading?'loading-animation':''}}"></image>
-  <view>提交中</view>
+<line-radio title='宣讲会时间'></line-radio>
+<view class='pickertime'>
+  <view class='title'>选择日期</view>
+  <picker mode='date' bindchange='datechange'>请选择</picker>
+  <view class='show'>{{date}}</view>
 </view>
+
+<line-time title='起始时间'></line-time>
+<line-time title='结束时间'></line-time>
+
+<jump title="{{item_three.title}}" items="{{item_three.items}}"></jump> 
+
+<commit-btn content="下一步" form_type="navigateTo" url="../form-seven/form-seven"></commit-btn>

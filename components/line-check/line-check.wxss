@@ -1,0 +1,46 @@
+/* components/line-check/line-check.wxss */
+page {
+  background-color: #f4f4f4;
+  line-height: 100rpx;
+}
+.title {
+  width: 100%;
+  height: 100rpx;
+  padding-left: 40rpx;
+  color: #888888;
+  font-size: 26rpx;
+}
+.radio {
+  width: 100%;
+  height: 100rpx;
+  display: block;
+  background-color: #ffffff;
+  border-bottom: 1px #f4f4f4 solid;
+  position: relative;
+}
+.radio-content {
+  width: 85%;
+  height: 100rpx;
+  padding-left: 40rpx;
+  color: #000000;
+  display: inline-block;
+}
+.icon {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+}
+.show {
+  width: 250rpx;
+  height: 100rpx;
+  display: block;
+  position: absolute;
+  right: 100rpx;
+  top: 0rpx;
+  text-align: right;
+  font-size: 28rpx;
+  color: #888888;
+}

@@ -3,13 +3,10 @@
     "pages/lists/lists",
     "pages/lists-empty/lists-empty",
     "pages/content/content",
-    "pages/form-one/form-one",
     "pages/form-one-one/form-one-one",
-    "pages/form-one-two/form-one-two",
     "pages/form-two/form-two",
     "pages/form-three/form-three",
     "pages/form-four/form-four",
-    "pages/form-five/form-five",
     "pages/form-six/form-six",
     "pages/submit-success/submit-success",
     "pages/login/login",
@@ -20,7 +17,10 @@
     "pages/jobselect/jobselect",
     "pages/forgetcode/forgetcode",
     "pages/severice/severice",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/addressSelector/addressSelector",
+    "pages/form-one/form-one",
+    "pages/form-seven/form-seven"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,5 +28,6 @@
     "navigationBarTitleText": "企业招聘发布",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#eceff4"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

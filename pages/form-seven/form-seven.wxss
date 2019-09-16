@@ -1,0 +1,55 @@
+/* pages/form-seven/form-seven.wxss */
+/* 加载中遮罩 */
+.shade {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  background-color: #494949;
+}
+.loading {
+  width: 250rpx;
+  height: 250rpx;
+  position: fixed;
+  top: 400rpx;
+  left: 250rpx;
+  background-color: black; 
+  opacity: 0.8;
+  z-index: 1000;
+}
+.loading image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 95rpx;
+  right: 95rpx;
+  bottom: 0rpx;
+}
+.loading view {
+  width: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 20rpx;
+}
+.loading-animation {
+  animation: loading 4s linear infinite;
+}
+/* 头像旋转效果  */
+@keyframes loading{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+.upload {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}

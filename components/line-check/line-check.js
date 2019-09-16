@@ -1,4 +1,4 @@
-// components/reradio/line-radio.js
+// components/line-check/line-check.js
 Component({
   /**
    * 组件的属性列表
@@ -21,22 +21,22 @@ Component({
   methods: {
     // 触摸点击触发选中改变
     click: function (options) {
-      if (options.mark.checked !== "true") {
         let newData = this.properties.items.map(currentValue => {
-          currentValue.checked = "";
           if (currentValue.value === options.mark.item.value) {
             this.triggerEvent('myevent', { 'value': currentValue }, { bubbles: true });
-            currentValue.checked = "true";
+            if (currentValue.checked == true) {
+              currentValue.checked = false;
+            } else {
+              currentValue.checked = true;
+            }
           }
           return currentValue;
         });
         this.setData({
           "items": newData
         })
-      }
     },
 
-    // 显示数据
     onshow: function (value, e) {
       let newData = this.properties.items.map(currentValue => {
         if (currentValue.value === value) {

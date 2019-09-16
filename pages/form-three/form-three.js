@@ -20,7 +20,7 @@ Page({
       ]
     },
     // 滑块
-    "isMonth": true,
+    "isMonth": false,
     "slider": "15",
     "title": "请选择月份数"
   },
@@ -29,6 +29,20 @@ Page({
     if (e.detail.value !== this.data.slider) {
       this.setData({
         slider: e.detail.value
+      })
+    }
+  },
+
+  // 组件通信
+  myevent: function (e) {
+    if (e.detail.value.value === '月薪') {
+      this.setData({
+        isMonth: true
+      })
+    }
+    else {
+      this.setData({
+        isMonth: false
       })
     }
   }

@@ -1,1 +1,22 @@
 /* pages/form-one-one/form-one-one.wxss */
+.popmain {
+  opacity: 0.4;
+}
+.shade {
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+.pop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+}
+.line-input {
+  padding-top: 800rpx;
+}
+mp-toptips {
+  z-index: 1000;
+}

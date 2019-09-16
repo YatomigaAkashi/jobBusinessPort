@@ -7,9 +7,6 @@ Page({
   data: {
     "item_one": {
       "title": "宣讲会时间",
-      "items": [
-        { "value": "日期",}
-      ]
     },
     "item_two": {
       "items": [
@@ -20,7 +17,7 @@ Page({
     "item_three": {
       "title": "宣讲会地点",
       "items": [
-        { "value": "选择地区" }
+        { "value": "建议接外部地图api" }
       ]
     },
     "item_four": {
@@ -31,15 +28,11 @@ Page({
     "loading": false
   },
 
-  // 提交
-  submit: function () {
+
+
+  datechange: function (e) {
     this.setData({
-      "loading": true
+      date: e.detail.value
     })
-    setTimeout(() => {
-      wx.reLaunch({
-        url: '../submit-success/submit-success',
-      })
-    }, 3000)
   }
 })
