@@ -1,61 +1,45 @@
 <!--pages/content/content.wxml-->
 <view class='main'>
-  <view class='job column'>{{item.job}}</view>
-  <view class='introduction column'>
-    <view class='title'>岗位介绍</view>
-    <view class='content content-intro'>
-      <view class='job-intro'>{{item.job_introduction}}</view>
+
+  <view class='img'>
+    <view class='content'></view>
+    <view class='title'>这里是文字</view>
+    <image src='../../images/timg.png'></image>
+  </view>
+
+  <view class='head'>
+    <view class='job column'>{{item.job}}</view>
+    <view class='require'>
+      <view class='month'>{{item.salary_month}}</view>
+      <view class='type'>{{item.seek_education}}</view>
+      <view class='number'>{{item.seek_number}}</view>
+      <view>{{item.job_address}}</view>
+    </view>
+    <view class='salary-number'>
+      {{item.salary_number}}<view style='display:inline;font-size: 26rpx;'>元/月</view>
     </view>
   </view>
-  <view class='salary column'>
-    <view class='title'>薪资</view>
-    <view class='content'>
-      <view class='salary-type'>{{item.salary_type}}</view>
-      <view class='salary-month'>{{item.salary_month}}</view>
-      <view class='salary-number'>{{item.salary_number}}</view>
-    </view>
-  </view>
-  <view class='seek column'>
-    <view class='title'>招聘对象</view>
-    <view class='content'>
-      <view>{{item.seek_education}}</view>
-      <view>{{item.seek_number}}</view>
-    </view>
-  </view>
-  <view class='meeting column'>
+
+  <view class='office'>招聘单位：{{item.job_office}}</view>
+
+  <view class='meeting'>
     <view class='title'>宣讲会</view>
-    <view class='content'>
-      <view>{{item.meeting_time}}</view>
-      <view>{{item.meeting_address}}</view>
+    <view class='require'>
+      <view class='time'>{{item.meeting_time}}</view>
+      <view class='day'>{{item.meeting_day}}</view>
+      <view class='address'>{{item.meeting_address}}</view>
     </view>
   </view>
-  <view class='company column'>
-    <view class='content'>
-      <view>
-        <view class='title'>招聘公司</view>
-        <view>{{item.job_company}}</view>
-      </view>
-      <view>
-        <view class='title'>用人单位</view>
-        <view>{{item.job_office}}</view>
-      </view>
-      <view>
-        <view class='title'>工作地点</view>
-        <view>{{item.job_address}}</view>
-      </view>
-    </view>
+
+  <view class='connection'>
+    <view class='title'>简历投递地址：</view>
+    <view class='email'>{{item.contact_email}}</view>
   </view>
-  <view class='contact column'>
-    <view class='title'>联系方式</view>
-    <view class='content'>
-      <view>
-        <view class='title'>邮箱</view>
-        <view>{{item.contact_email}}</view>
-      </view>
-      <view>
-        <view class='title'>电话</view>
-        <view>{{item.contact_phonenumber}}</view>
-      </view>
-    </view>
+  
+  <view class='connection show'>
+    <view class='title'>宣传地址：</view>
+    <view>{{item.show}}</view>
   </view>
+
+  <button>修改</button>
 </view>

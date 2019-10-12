@@ -1,71 +1,149 @@
 /* pages/content/content.wxss */
 page {
-  background: #f4f4f4;
+  background: #ffffff;
 }
-.column {
-  background-color: #ffffff;
-  border-bottom: 1px #f4f4f4 solid;
-  padding-left: 40rpx; 
-  padding-right: 40rpx;
+.img {
+  height:400rpx;
+  width:100%;
+  position: relative;
 }
-.job {
+.img .content {
+  position: absolute;
   width: 100%;
-  height: 120rpx;
-  font-size: 36rpx;
-  font-weight: bold;
-  line-height: 120rpx;
+  height: 200rpx;
+  top: 100rpx;
+  background-color: black;
+  opacity: 0.3;
 }
-.title{
+.img .title{
+  position: absolute;
+  top: 100rpx;
+  left: 75rpx;
+  width: 80%;
+  height: 200rpx;
+  font-size: 50rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  opacity: 1;
+}
+.img image {
+  height: 400rpx;
   width: 100%;
-  font-size: 28rpx;
-  line-height: 72rpx;
-  height: 72rpx;
 }
-.content {
-  height: 45rpx;
-  font-size: 26rpx;
-  color: #888888;
-  line-height: 45rpx;
+.head {
+  width: 100%;
+  height: 160rpx;
+  position: relative;
 }
-.content-intro {
+.head .job {
+  width: 100%;
   height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  font-size: 42rpx;
+  font-weight: bold;
+  margin-left: 40rpx;
+  padding-top: 20rpx;
 }
-.salary .content view {
-  display: inline-block;
-  margin-right: 60rpx;
+.require {
+  width: 60%;
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
 }
-.seek .content view {
-  display: inline-block;
-  margin-right: 60rpx;
+.require>view {
+  height: 30rpx;
+  padding: 5rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  margin-right: 20rpx;
 }
-.meeting .content {
-  height: 90rpx;
+.require view:nth-child(1) {
+  background-color: #f8e1db;
+  color: #eea28a;
 }
-.company {
+.require view:nth-child(2) {
+  background-color: #ecf2ff;
+  color: #7090d9;
+}
+.require view:nth-child(3) {
+  background-color: #e2ffe0;
+  color: #80c688;
+}
+ .require view:nth-child(4) {
+  background-color: #ffe1db;
+  color: #f8a89f;
+}
+.head .salary-number{
+  width: 400rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 40rpx;
+  top: 20rpx;
+  font-size: 50rpx;
+  line-height: 100rpx;
+  text-align: right;
+  color: red;
+}
+.office {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
   width: 100%;
-  height: 168rpx;
+  height: 50rpx;
+  padding-left: 40rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: black;
 }
-.company .content view>view {
-  width: 200rpx;
-  display: inline-block;
-}
-.company .content .title {
-  margin-right: 100rpx;
-  color: #000000;
-  line-height: 56rpx;
-  height: 56rpx;
-}
-.contact {
+.meeting {
   width: 100%;
-  height: 184rpx;
+  height: 150rpx;
 }
-.contact .content view>view {
-  width: 200rpx;
-  display: inline-block;
+.meeting .title {
+  width: 100%;
+  height: 80rpx;
+  font-size: 42rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+  font-weight: bold;
 } 
-.contact .content .title {
-  margin-right: 100rpx;
-  color: #000000;
-  line-height: 56rpx;
-  height: 56rpx;
+/* .meeting .content {
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+.meeting .content>view {
+  height: 40rpx;
+  margin-right: 40rpx; 
+} */
+.connection {
+  margin-top: 20rpx;
+  padding-left: 40rpx;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.connection>view {
+  display: inline-block;
+  border-bottom: 1px solid #f4f4f4; 
+}
+.show {
+  margin-top: 0;
+}
+button {
+  width: 95%;
+  position: fixed;
+  bottom: 10rpx;
+  left: 2.5%;
+  background-color: rgb(62, 163, 62);
 }
